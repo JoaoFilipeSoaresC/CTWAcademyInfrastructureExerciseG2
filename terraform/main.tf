@@ -1,6 +1,6 @@
 # Random identifier to avoid collisions
 resource "random_string" "number" {
-  length  = 4
+  length  = 5
   upper   = false
   lower   = false
   numeric = true
@@ -104,7 +104,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
   os_disk {
     name                 = "osDisk${random_string.number.result}"
     caching              = "ReadWrite"
-    storage_account_type = "Premium_LRS"
+    storage_account_type = "Standard_LRS"
   }
 
   source_image_reference {
