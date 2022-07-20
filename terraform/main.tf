@@ -95,11 +95,11 @@ resource "azurerm_storage_account" "mystorageaccount" {
 
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "myterraformvm" {
-  name                  = "vm${random_string.number.result}"
+  name                  = "vm-group2"
   location              = var.resource_group_location
   resource_group_name   = var.resource_group_name
   network_interface_ids = [azurerm_network_interface.myterraformnic.id]
-  size                  = "Standard_DS1_v2"
+  size                  = "Standard_D4_v3"
 
   os_disk {
     name                 = "osDisk${random_string.number.result}"
