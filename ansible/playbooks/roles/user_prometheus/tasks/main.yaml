@@ -1,0 +1,13 @@
+- name: Creating prometheus user group
+  group: name="{{groupId}}"
+  become: true
+  
+- name: Creating prometheus user
+  user:
+    name: "{{userId}}"
+    group: "{{groupId}}"
+    system: yes
+    shell: "/sbin/nologin"
+    comment: "{{userId}} nologin User"
+    createhome: "no"
+    state: present

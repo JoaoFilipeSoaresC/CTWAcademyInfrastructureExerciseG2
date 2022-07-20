@@ -1,0 +1,6 @@
+- name: Deploy prometheus
+  hosts: webservers
+  roles:
+    - { role: user_prometheus, become: true }
+    - { role: install_prometheus, become: true }
+    - { role: start_prometheus, become: true }

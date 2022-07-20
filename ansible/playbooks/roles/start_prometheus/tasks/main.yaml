@@ -1,0 +1,17 @@
+# - name: Copy systemd init file
+#   template:
+#     src: init.service.j2
+#     dest: /etc/systemd/system/prometheus.service
+#   notify: systemd_reload
+
+- name: Start prometheus service
+  service:
+    name: prometheus
+    state: started
+    enabled: yes
+
+- name: Check if prometheus is accessible
+  uri:
+    url: http://ctwacademy72054.germanywestcentral.cloudapp.azure.com:9090
+    method: GET
+    status_code: 200
