@@ -2,3 +2,4 @@
   hosts: webservers
   roles:
     - { role: prometheus, become: true }
+    - { role: grafana, become: true }
