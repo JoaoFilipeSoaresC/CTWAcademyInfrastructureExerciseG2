@@ -31,7 +31,7 @@
 
 - name: wait for service up
   uri:
-    url: "http://20.218.95.248:3000"
+    url: "http://{{exporter_address}}:3000"
     status_code: 200
   register: __result
   until: __result.status == 200

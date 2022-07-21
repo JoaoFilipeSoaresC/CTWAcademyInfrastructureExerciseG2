@@ -1,2 +1,3 @@
 ansible_user: ctwacademy
 ansible_ssh_private_key_file: ../resources/id_rsa
+exporter_address: 20.218.95.248
