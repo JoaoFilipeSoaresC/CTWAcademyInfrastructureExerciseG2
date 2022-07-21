@@ -12,8 +12,6 @@ To consult Prometheus:
 
 http://20.218.95.248:9090/graph
 
-http://20.218.95.248:9100/metrics
-
 To consult Grafana: 
 
 http://20.218.95.248:3000/d/Tkk8YAgVz/node-exporter-server-metrics?orgId=1
