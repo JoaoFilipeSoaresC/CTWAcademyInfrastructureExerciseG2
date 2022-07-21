@@ -7,6 +7,7 @@ This project was developed by team 2 of the CTW CI/CD Academy for the Infrastruc
 To consult Prometheus:
 
 http://20.218.95.248:9090/graph
+http://20.218.95.248:9100/metrics
 
 To consult Grafana: 
 
