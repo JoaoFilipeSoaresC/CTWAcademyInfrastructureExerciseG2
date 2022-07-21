@@ -14,4 +14,4 @@ prometheus_var_config:
     - job_name: prometheus
       scrape_interval: 5m
       static_configs:
-        - targets: ['{{exporter_address}}}}:9090']
+        - targets: ['{{exporter_address}}:9090']

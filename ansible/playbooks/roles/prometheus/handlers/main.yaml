@@ -7,6 +7,6 @@
 
 - name: reload_prometheus
   uri:
-    url: http://20.218.95.248:9090/-/reload
+    url: http://{{exporter_address}}:9090/-/reload
     method: POST
     status_code: 200
