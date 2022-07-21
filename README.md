@@ -15,11 +15,14 @@ In order to deploy 3 VMs instead of one, it's necessary to add a count=3 on the 
 - along with the network management disk creation
 - along with the virtual machines creation
 
-In order to create unique names, count.index is used. For example, if we nominate our VM vm-ctw-g2, what will happen is the first VM will be named vm-ctw-g2$1, the second one will be named vm-ctw-g2$2, and so on.
+Also, to create unique names, ${count.index} is used. For example, if we nominate our VM vm-ctw, what will happen is the first VM will be named vm-ctw1, the second one will be named vm-ctw2, and so on.
+
 
 
 2 - During the group assignment, various files will have to be downloaded from the internet (the prometheus stack binaries), is there a way for ansible to be sure that these files are the originals and have not been tampered with?
 
+A parameter on Ansible (when asking to download a binary) must be passed. Not any parameter, but the checksum one, which works like this:
+- if a checksum is passed to this parameter, the digest of the destination file will be calculated after it is downloaded to ensure its integrity and verify that the transfer completed successfully
 
 
 
